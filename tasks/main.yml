@@ -11,7 +11,7 @@
 - name: Install kubeadm,kubelet,kubectl,iproute-tc and Docker
   package:
          name: "{{ item }}"
-         state: latest
+         state: present
   loop: "{{ packages }}"
 
 - name: start the Docker and kubelet service
