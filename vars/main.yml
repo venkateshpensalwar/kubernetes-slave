@@ -5,7 +5,7 @@ packages:
        - "kubelet"
        - "kubectl"
        - "docker"
-       - "iproute-tc" 
+       - "iproute-tc"
 
 services:
       - "docker"

@@ -9,8 +9,8 @@
     enabled: yes
 
 - name: Install kubeadm,kubelet,kubectl,iproute-tc and Docker
-  package: 
-         name: "{{ item }}" 
+  package:
+         name: "{{ item }}"
          state: latest
   loop: "{{ packages }}"
 
@@ -25,7 +25,7 @@
   copy:
           src: daemon.json
           dest: /etc/docker/daemon.json
-        
+
 - name: restart the Docker services
   service:
           name: docker
